@@ -1,10 +1,6 @@
 package com.pram.trydagger2;
 
-import javax.inject.Inject;
+public interface Engine {
 
-public class Engine {
-
-    @Inject
-    public Engine() {
-    }
+    void start();
 }
