@@ -1,4 +1,4 @@
-package com.pram.trydagger2;
+package com.pram.trydagger2.Car;
 
 public class Wheels {
 //we don't own this class so we can't annotate it with @Inject

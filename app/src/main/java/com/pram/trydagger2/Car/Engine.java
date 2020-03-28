@@ -1,4 +1,4 @@
-package com.pram.trydagger2;
+package com.pram.trydagger2.Car;
 
 public interface Engine {
 

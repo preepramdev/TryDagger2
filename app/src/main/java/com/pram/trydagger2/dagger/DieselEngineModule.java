@@ -1,4 +1,7 @@
-package com.pram.trydagger2;
+package com.pram.trydagger2.dagger;
+
+import com.pram.trydagger2.Car.DieselEngine;
+import com.pram.trydagger2.Car.Engine;
 
 import dagger.Binds;
 import dagger.Module;

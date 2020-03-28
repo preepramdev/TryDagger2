@@ -1,4 +1,8 @@
-package com.pram.trydagger2;
+package com.pram.trydagger2.dagger;
+
+import com.pram.trydagger2.Car.Rims;
+import com.pram.trydagger2.Car.Tires;
+import com.pram.trydagger2.Car.Wheels;
 
 import dagger.Module;
 import dagger.Provides;
