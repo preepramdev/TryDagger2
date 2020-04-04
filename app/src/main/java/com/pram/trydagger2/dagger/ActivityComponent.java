@@ -4,19 +4,18 @@ import com.pram.trydagger2.Car.Car;
 import com.pram.trydagger2.MainActivity;
 
 import javax.inject.Named;
-import javax.inject.Singleton;
 
 import dagger.BindsInstance;
 import dagger.Component;
 
-@Singleton
-@Component(modules = {WheelsModule.class, PetrolEngineModule.class})
-//@Component(modules = {WheelsModule.class, DieselEngineModule.class})
-public interface CarComponent {
+@PerActivity
+@Component(dependencies = AppComponent.class, modules = {WheelsModule.class, PetrolEngineModule.class})
+public interface ActivityComponent {
 
     Car getCar();
 
     void inject(MainActivity mainActivity);
+
 
     @Component.Builder
     interface Builder {
@@ -27,6 +26,8 @@ public interface CarComponent {
         @BindsInstance
         Builder engineCapacity(@Named("engine capacity") int engineCapacity);
 
-        CarComponent build();
+        Builder appComponent(AppComponent component);
+
+        ActivityComponent build();
     }
 }

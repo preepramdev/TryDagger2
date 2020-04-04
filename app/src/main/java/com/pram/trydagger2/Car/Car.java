@@ -2,8 +2,11 @@ package com.pram.trydagger2.Car;
 
 import android.util.Log;
 
+import com.pram.trydagger2.dagger.PerActivity;
+
 import javax.inject.Inject;
 
+@PerActivity
 public class Car {
     private static final String TAG = "Car";
 
@@ -25,6 +28,6 @@ public class Car {
 
     public void drive() {
         engine.start();
-        Log.e(TAG, driver + "drives" + this);
+        Log.e(TAG, driver + " drives " + this);
     }
 }
