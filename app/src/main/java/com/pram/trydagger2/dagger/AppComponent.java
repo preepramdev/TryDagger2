@@ -1,15 +1,13 @@
 package com.pram.trydagger2.dagger;
 
-import com.pram.trydagger2.Car.Driver;
-import com.pram.trydagger2.dagger.DriverModule;
-
 import javax.inject.Singleton;
 
 import dagger.Component;
+import dagger.Subcomponent;
 
 @Singleton
 @Component(modules = DriverModule.class)
 public interface AppComponent {
 
-    Driver getDriver();
+    ActivityComponent getActivityComponent(DieselEngineModule dieselEngineModule);
 }
